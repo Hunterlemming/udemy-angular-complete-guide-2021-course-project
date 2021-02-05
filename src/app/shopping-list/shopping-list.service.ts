@@ -34,4 +34,21 @@ export class ShoppingListService {
     this.ingredients.push(...ingredients);
     this.ingredientsChanged.next(this.getIngredients());
   }
+
+  updateIngredient(currentIndex: number, newIngredient: Ingredient): void {
+    // const myNewIngredients = [...this.ingredients];
+    // myNewIngredients[currentIndex] = newIngredient;
+    //
+    // const myNewIngredients2 = this.ingredients.map(
+    //   (ingredient, i) => {
+    //     if (i === currentIndex) {
+    //       return newIngredient;
+    //     }
+    //     return ingredient;
+    //   }
+    // );
+
+    this.ingredients[currentIndex] = newIngredient;
+    this.ingredientsChanged.next(this.getIngredients());
+  }
 }
