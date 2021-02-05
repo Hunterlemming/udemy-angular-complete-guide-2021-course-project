@@ -1,0 +1,7 @@
+.my-delete-button-column {
+  display: flex;
+}
+
+.my-danger-button {
+  margin-left: auto;
+}
